@@ -9,14 +9,18 @@
         <!--Que luego puedo complementar-->
         <style>
             .active {
-                text-decoration: underline;
+                text-decoration: overline;
             }
         </style>
     </head>
     <body class="bg-body-tertiary">
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="backdrop-filter: blur(10px);">
             <div class="container">
-                <a class="navbar-brand" href="index.html">NOMBRE APELLIDO</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="me-1" fill="hotpink" viewBox="0 0 100 100">
+                  <title>53_Alarm_v15</title>     
+                 <path d="M22.82,34.26a3.72,3.72,0,0,1-5.29,0L9.9,26.63a3.84,3.84,0,0,1,0-5.29,3.57,3.57,0,0,1,5.17,0L22.82,29A3.72,3.72,0,0,1,22.82,34.26ZM73.74,58.49l1.11,16.73v6.64H50v-36H43.85c-4.55,0-9.23,2.33-10.09,13.41L32.53,75.46v6.4H25.15V75.22l1.23-16.73c.74-10.7,5.78-20.05,17.47-20.05H56.27C67.71,38.44,73,47.29,73.74,58.49ZM25.15,87.39h49.7v5.54H25.15Zm21.16-65.8V10.76A3.78,3.78,0,0,1,50,7.07a3.7,3.7,0,0,1,3.69,3.69V21.59A3.71,3.71,0,0,1,50,25.28,3.79,3.79,0,0,1,46.31,21.59ZM90.1,26.88,82.47,34.5a3.69,3.69,0,1,1-5.29-5.16l7.75-7.75a3.79,3.79,0,0,1,5.17,0A3.84,3.84,0,0,1,90.1,26.88Z"></path>        
+                  </svg>      
+                <a class="navbar-brand" href="index.html">LUCAS GÓNGORA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -66,7 +70,7 @@
                 datos.features.forEach((t, i) => {
                     if (t.properties.place.includes("Chile") && t.properties.mag > 4.0) {
                         if (t.properties.mag > 4.9) {
-                            seccion.innerHTML += `<article class="col mb-3"><div class="card bg-warning h-100 border-0 shadow-sm"><div class="d-flex align-items-center"><div class="p-3"><h3 class="display-4">${t.properties.mag.toFixed(1)}</h3></div><div class="p-3 ps-2"><p class="text-body small p-0 m-0"><a href="${t.properties.url}" target="_blank" rel="noopener noreferrer">${t.properties.place}</a><br/><small>${registro(t.properties.time)}</small></p></div></div></div></article>`;
+                            seccion.innerHTML += `<article class="col mb-3"><div class="card bg-danger h-100 border-0 shadow-sm"><div class="d-flex align-items-center"><div class="p-3"><h3 class="display-4">${t.properties.mag.toFixed(1)}</h3></div><div class="p-3 ps-2"><p class="text-body small p-0 m-0"><a href="${t.properties.url}" target="_blank" rel="noopener noreferrer">${t.properties.place}</a><br/><small>${registro(t.properties.time)}</small></p></div></div></div></article>`;
                         } else {
                             seccion.innerHTML += `<article class="col mb-3"><div class="card h-100 border-0 shadow-sm"><div class="d-flex align-items-center"><div class="p-3"><h3 class="display-4">${t.properties.mag.toFixed(
                                 1)}</h3></div><div class="p-3 ps-2"><p class="text-body small p-0 m-0"><a href="${t.properties.url}" target="_blank" rel="noopener noreferrer">${t.properties.place}</a><br/><small>${registro(t.properties.time)}</small></p></div></div></div></article>`;
